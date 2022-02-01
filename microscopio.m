@@ -25,11 +25,12 @@ f1 = f2/M;
 
 df_0 = (1/(Nx*dx))
 
-rpupila = f1*AN*(df_0)
+rpupila = f1*AN % En dimensiones de espacio 
+rpupilaf = (1/(Nx*rpupila))/df_0 %En dimensiones de frecuencia
 
 % 2. Se genera la pupila dependiente de los parametros físicos del sistema.
 
-pupila = filtroCircular ([Nx/2 Ny/2],rpupila,[Ny Nx]);
+pupila = filtroCircular ([Nx/2 Ny/2],rpupilaf,[Ny Nx]);
 
 % 3. Se simula el paso a través de la primera lente, si se asume lambda *f = 1
 % de acuerdo a lo visto en clase tenemos que al pasar por la
