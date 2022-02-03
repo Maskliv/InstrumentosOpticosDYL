@@ -23,7 +23,7 @@ mm = 1E-3;
 f1 = f2/M; 
 
 
-df_0 = (1/(Nx*dx))
+df_0 = (waveLength*f1/(Nx*dx))
 
 rpupila = f1*AN % En dimensiones de espacio 
 rpupilaf = (1/(Nx*rpupila))/df_0 %En dimensiones de frecuencia
