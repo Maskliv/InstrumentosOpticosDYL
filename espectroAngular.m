@@ -1,15 +1,17 @@
-function [campoPropagado] = espectroAngular(campoEntrada,dx,dy,distPropagacion, waveLength, options)
+function [campoPropagado] = espectroAngular(campoEntrada,dx,dy,Nx,Ny,distPropagacion, waveLength, options)
 arguments
     campoEntrada
     dx double
     dy double
+    Nx double
+    Ny double
     distPropagacion double
     waveLength double
     options.dft logical = false
 end
 
 % Se define el espacio coordenado
-[Ny,Nx] = size(campoEntrada);
+
 
 x = 1-(Nx/2):Nx/2;
 y = 1-(Ny/2):Ny/2;
