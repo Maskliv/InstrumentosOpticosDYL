@@ -1,4 +1,4 @@
-function [salidaPura, imagenObservacion,pupila] = microscopio(imagenEntrada,M,f2,AN,Nx,Ny,dx,dy, waveLength)
+function [salidaPura, imagenObservacion2 ,pupila, spot] = microscopio(imagenEntrada,d,M,f2,AN,Nx,Ny,dx,dy, waveLength)
 
 % Definición de unidades de trabajo 
 nm = 1E-9;
@@ -52,7 +52,10 @@ salidaPura = -1i * (fft2(planoFourierFiltrado));
 
 % 6. El ojo humano observaria 
 
-
 imagenObservacion = (abs(salidaPura).^2);
+
+spot = customgauss([Nx Nx], d*M/(2*dx), d*M/(2*dx), 0, 0, 1, [0 0]);
+
+imagenObservacion2 = imfilter(imagenObservacion,spot);
 
 end
