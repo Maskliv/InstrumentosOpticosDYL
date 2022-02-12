@@ -3,7 +3,7 @@ function Siemens_star()
 % Siemens Star
 % Hans Strasburger, June 2018
 
-number_of_spikes = 80;					% fill in as you wish
+number_of_spikes = 40;					% fill in as you wish
 radius = 10;							% Siemens star radius
 
 axis equal								% 1:1 aspect ratio

@@ -24,7 +24,7 @@ f1 = f2/M;
 
 
 dx_0 = (waveLength*f1/(Nx*dx));
-rpupila = f1*AN/dx_0; % En dimensiones de espacio 
+rpupila = f1*AN/dx_0 % En dimensiones de espacio 
 
 
 % 2. Se genera la pupila dependiente de los parametros físicos del sistema.
